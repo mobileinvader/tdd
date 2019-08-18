@@ -1,2 +1,1 @@
-# tdd
-Test-driven development example
+# Test-driven development
