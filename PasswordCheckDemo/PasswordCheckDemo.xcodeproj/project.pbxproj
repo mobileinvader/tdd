@@ -12,7 +12,8 @@
 		C818FE912309AB0800E17AAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C818FE8F2309AB0800E17AAB /* Main.storyboard */; };
 		C818FE932309AB0A00E17AAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C818FE922309AB0A00E17AAB /* Assets.xcassets */; };
 		C818FE962309AB0A00E17AAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C818FE942309AB0A00E17AAB /* LaunchScreen.storyboard */; };
-		C818FEA12309AB0A00E17AAB /* PasswordCheckDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C818FEA02309AB0A00E17AAB /* PasswordCheckDemoTests.swift */; };
+		C818FEAC2309B4B200E17AAB /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C818FEAB2309B4B200E17AAB /* RegistrationViewModel.swift */; };
+		C818FEAE2309B5D700E17AAB /* RegistrationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C818FEAD2309B5D700E17AAB /* RegistrationViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +35,9 @@
 		C818FE952309AB0A00E17AAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C818FE972309AB0A00E17AAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C818FE9C2309AB0A00E17AAB /* PasswordCheckDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordCheckDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C818FEA02309AB0A00E17AAB /* PasswordCheckDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCheckDemoTests.swift; sourceTree = "<group>"; };
 		C818FEA22309AB0A00E17AAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C818FEAB2309B4B200E17AAB /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		C818FEAD2309B5D700E17AAB /* RegistrationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				C818FE922309AB0A00E17AAB /* Assets.xcassets */,
 				C818FE942309AB0A00E17AAB /* LaunchScreen.storyboard */,
 				C818FE972309AB0A00E17AAB /* Info.plist */,
+				C818FEAB2309B4B200E17AAB /* RegistrationViewModel.swift */,
 			);
 			path = PasswordCheckDemo;
 			sourceTree = "<group>";
@@ -90,8 +93,8 @@
 		C818FE9F2309AB0A00E17AAB /* PasswordCheckDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				C818FEA02309AB0A00E17AAB /* PasswordCheckDemoTests.swift */,
 				C818FEA22309AB0A00E17AAB /* Info.plist */,
+				C818FEAD2309B5D700E17AAB /* RegistrationViewModelTests.swift */,
 			);
 			path = PasswordCheckDemoTests;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 					};
 					C818FE9B2309AB0A00E17AAB = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 						TestTargetID = C818FE872309AB0800E17AAB;
 					};
 				};
@@ -198,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C818FE8E2309AB0800E17AAB /* RegistrationViewController.swift in Sources */,
+				C818FEAC2309B4B200E17AAB /* RegistrationViewModel.swift in Sources */,
 				C818FE8C2309AB0800E17AAB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,7 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C818FEA12309AB0A00E17AAB /* PasswordCheckDemoTests.swift in Sources */,
+				C818FEAE2309B5D700E17AAB /* RegistrationViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +402,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MEEH8E5U85;
 				INFOPLIST_FILE = PasswordCheckDemoTests/Info.plist;
@@ -407,6 +413,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kristijankralj.PasswordCheckDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PasswordCheckDemo.app/PasswordCheckDemo";
@@ -418,6 +425,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MEEH8E5U85;
 				INFOPLIST_FILE = PasswordCheckDemoTests/Info.plist;
